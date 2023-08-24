@@ -40,7 +40,7 @@ In this map the bedrock layer will be visible. If you don't want the bedrock to 
    ```
    dmap mapadd world_nether:nether_roof title:"Nether Roof" perspective:nether_top_map_hires
    ```
-  This adds the actual **map**. If your **world** file is called anything other than "**world**" make sure to change "**world_nether**" in the command to your actual world name. My world file is called "JonasServer" So the command i have to write is "dmap mapadd JonasServer_nether:nether_roof title:"The Roof" perspective:nether_top_map_lowre". You can also change the **title** and **name* to anything you want. 
+  This adds the actual **map**. If your **world** file is called anything other than "**world**" make sure to change "**world_nether**" in the command to your actual world name. My world file is called "JonasServer" So the command i have to write is "dmap mapadd JonasServer_nether:nether_roof title:"The Roof" perspective:nether_top_map_lowre". You can also change the **title** and **name** to anything you want. 
 
 7. Unpause live map update:
    ```
