@@ -84,14 +84,14 @@ In this map the bedrock layer will be visible. If you don't want the bedrock to 
     ### **Changing map background**
     You can change the map background to anything you want, but im gonna keep it simple and just add the same red color that is used in the default nether maps. 
 
-    3. Stop the server.
-    4. Open the **worlds** folder located here: **server\plugins\dynmap\worlds.txt**
-    5. Located the map you just made inside the **worlds.txt** file. You might have to scroll down a bit to find the nether maps. Right under the default nether maps you should see the nether roof map.
-    6. Once you find the map simply add this line of code in between **tilescale**, and **append_to_world**:
+    1. Stop the server.
+    2. Open the **worlds** folder located here: **server\plugins\dynmap\worlds.txt**
+    3. Located the map you just made inside the **worlds.txt** file. You might have to scroll down a bit to find the nether maps. Right under the default nether maps you should see the nether roof map.
+    4. Once you find the map simply add this line of code in between **tilescale**, and **append_to_world**:
        ```
        background: '#300806'
        ```
-    7. Start the server again, and the nether roof map should now have a dark red background.
+    5. Start the server again, and the nether roof map should now have a dark red background.
         
    ### **Rendering the nether roof with a 3D/Surface camera angle**
    Here is how you render the nether roof with a 3d view. You can either make a new perspective and map again, or you can change the flat map you made earlier. I would recomend making a new map.
