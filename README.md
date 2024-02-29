@@ -98,7 +98,7 @@ Here is how you render the nether roof with a 3d view. You can either make a new
 
 If you are making a new map, follow the steps for "**Adding a custom "Flat" perspective**" again, but come back here after doing step 3. If you are not making a new map you can simply edit the text you pasted in `custom-perspectives.txt` earlier.
 
-1. Inside the `custom-perspectives.txt` file, change inclination to **30**. This will make the camera angle the same as the default **Overworld_Surface** map. You can also change **azimuth** to change the rotation. **135** is used for **Overworld_Surface** by default. If you want any other direction, simply look at the chart bellow, and copy that.
+1. Inside the `custom-perspectives.txt` file, change **inclination** to **30**. This will make the camera angle the same as the default **Overworld_Surface** map. You can also change **azimuth** to change the rotation. **135** is used for **Overworld_Surface** by default. If you want any other direction, simply look at the chart bellow, and copy that.
 ```
 azimuth: 0        = North
 inclination: 30   
