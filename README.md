@@ -7,16 +7,16 @@ _This guide is heavely inspired by a guide by "depwl9992". The guides are very s
 # Adding a custom "Flat" perspective
 To render the nether roof, you first need to make a new perspective. This first map will be flat (2d).
 1. Save and stop the server.    
-2. Open the custom-perspectives.txt file located in **server\plugins\dynmap\custom-perspectives.txt**.
+2. Open the custom-perspectives.txt file located in `server\plugins\dynmap\custom-perspectives.txt`.
 3. On line 3 in this file it should say "**perspectives:**", paste this text on the line bellow:
-```
+```yaml
 - class: org.dynmap.hdmap.IsoHDPerspective
-name: nether_top_map_hires
-maximumheight: 256
-minimumheight: 128
-inclination: 90
-scale: 16
-azimuth: 180
+  name: nether_top_map_hires
+  maximumheight: 256
+  minimumheight: 128
+  inclination: 90
+  scale: 16
+  azimuth: 180
 ```
 Now save and close the file. The name can be anything you want, but you have to use that same name later.
 This Perspective will be in "**hires**". If you want to change to a smaller resolution, you just have to change "**Scale**" to a smaller value.
@@ -32,29 +32,29 @@ In this map the bedrock layer will be visible. If you don't want the bedrock to 
 In the next few steps you will execute a few commands. You can do these commands either in the **server console**, or **in-game**. I prefer to do it in-game because **tab** lets you finish the command without typing every single symbol.  
 
 5. Pause live map updates: 
-```
+```console
 dynmap pause all
 ``` 
 
 6. Add the map:
-```
+```console
 dmap mapadd world_nether:nether_roof title:"Nether Roof" perspective:nether_top_map_hires
 ```
 This adds the actual **map**. If your **world** file is called anything other than "**world**" make sure to change "**world_nether**" in the command to your actual world name. My world file is called "JonasServer" So the command i have to write is "dmap mapadd JonasServer_nether:nether_roof title:"The Roof" perspective:nether_top_map_lowre". You can also change the **title** and **name** to anything you want. 
 
 7. Unpause live map update:
-```
+```console
 dynmap pause none
 ```
 
 8. Stop rendering nether:
-```
+```console
 dynmap cancelrender world_nether
 ```
 Again, if your world name is different remember to change it in the command.
 
 9. Finally, start rendering the new map you just made:
-```
+```console
 dynmap fullrender world_nether:nether_roof
 ```
 And that goes for this one too, remember to use the right world name. Also, i wouldn't reccomend typing this one in-game, as you will be spammed in chat every few seconds when it renders the map. Use the server console instead.  \
@@ -68,14 +68,14 @@ A single invisible "space" too much can cause it to not work. Copy-pasting the c
 
 
 # Changing map icon
-To see all the available icons open the **images** folder located here: **server\plugins\dynmap\web\images**. You can use any of these icons, or add your own. Just remember to make the resolution of the image **16x16** pixles. Find an image you want to use, then follow the steps bellow:
+To see all the available icons open the **images** folder located here: `server\plugins\dynmap\web\images`. You can use any of these icons, or add your own. Just remember to make the resolution of the image **16x16** pixles. Find an image you want to use, then follow the steps bellow:
 
 1. Pause live map updates: 
-```
+```console
 dynmap pause all
 ```
 2. Set the icon:
-```
+```console
 dmap mapset world_nether:nether_roof icon:images/(The image you want)
 ```
 simply replace "**(The image you want)**" with the name of the image you want to use. On my map i uploaded an image of a flat bedrock block for the flat map, and a 3d bedrock block for the 3d map. So when i ran the command it looked like this: "dmap mapset JonasServer_nether:nether_roof icon:images/bedrock.png".
@@ -85,10 +85,10 @@ simply replace "**(The image you want)**" with the name of the image you want to
 You can change the map background to anything you want, but im gonna keep it simple and just add the same red color that is used in the default nether maps. 
 
 1. Stop the server.
-2. Open the **worlds** folder located here: **server\plugins\dynmap\worlds.txt**
+2. Open the **worlds** folder located here: `server\plugins\dynmap\worlds.txt`
 3. Located the map you just made inside the **worlds.txt** file. You might have to scroll down a bit to find the nether maps. Right under the default nether maps you should see the nether roof map.
 4. Once you find the map simply add this line of code in between **tilescale**, and **append_to_world**:
-```
+```yaml
 background: '#300806'
 ```
 5. Start the server again, and the nether roof map should now have a dark red background.
@@ -128,18 +128,18 @@ inclination: 30
 
 # Deleting maps
 1. Find the **ID** of the map you want to delete:
-```
+```console
 dmap worldlist
 ```
 2. Pause live map updates: 
-```
+```console
 dynmap pause all
 ``` 
 3. Delete the map, use the map **ID/Name** you found in step 1. In this example i will show how to delete the map made earlier in this guide:
-```
+```console
 dmap mapdelete world_nether:nether_roof
 ```
 4. Unpause live map update:
-```
+```console
 dynmap pause none
 ```
