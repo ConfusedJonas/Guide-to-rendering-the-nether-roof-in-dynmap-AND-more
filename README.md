@@ -129,6 +129,7 @@ inclination: 30
 
 # Displaying markers on sidebar
 There is actually an option to display markers on the sidebar, but this function is hidden. Here is a quick turtorial on how to display them
+
 ![Dynmap markers on sidebar](https://i.imgur.com/JxIbZaC.png)
 
 1. Open `Server\plugins\dynmap\configuration.txt`
