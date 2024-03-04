@@ -70,6 +70,8 @@ A single invisible "space" too much can cause it to not work. Copy-pasting the c
 # Changing map icon
 To see all the available icons open the **images** folder located here: `server\plugins\dynmap\web\images`. You can use any of these icons, or add your own. Just remember to make the resolution of the image **16x16** pixles. Find an image you want to use, then follow the steps bellow:
 
+![Dynmap images](https://i.imgur.com/g4yAkv2.png)
+
 1. Pause live map updates: 
 ```console
 dynmap pause all
@@ -125,6 +127,56 @@ azimuth: 315      = North-West
 inclination: 30   
 ```
 
+# Displaying markers on sidebar
+There is actually an option to display markers on the sidebar, but this function is hidden. Here is a quick turtorial on how to display them
+![Dynmap markers on sidebar](https://i.imgur.com/JxIbZaC.png)
+
+1. Open `Server\plugins\dynmap\configuration.txt`
+2. Paste the following lines under the other component definitions
+```yaml
+- class: org.dynmap.ClientComponent
+  type: sidebarmarkers
+  title: 'Markers (Current world)'
+```
+This will display all the markers in the same dimention as the map currently selected. You can hover your cursor on the icons to see the marker name, or click the markers to jump to the marker on the map. Personally i don't like the title to be displayed on the sidebar, but i couldn't figure out how to remove it. Even if i removed the title line from the file it still displayed the title. Therefor changed the title to display the seed instead on my own map.
+
+# Displaying the marker titles
+I also like to see the marker title on my map. This can easily be enabled in the `configuration.txt` file.
+![Display marker titles](https://i.imgur.com/rfn8uhD.png)
+1. Open `configuration.txt`
+2. Scroll down untill you find the marker component
+```yaml
+- class: org.dynmap.MarkersComponent
+    type: markers
+    showlabel: false
+    enablesigns: false
+    default-sign-set: markers
+    showspawn: true
+    spawnicon: world
+    spawnlabel: Spawn
+    showofflineplayers: false
+    offlinelabel: Offline
+    offlineicon: offlineuser
+    offlinehidebydefault: true
+    offlineminzoom: 0
+    maxofflinetime: 30
+    showspawnbeds: false
+    spawnbedlabel: Spawn Beds
+    spawnbedicon: bed
+    spawnbedhidebydefault: true
+    spawnbedminzoom: 0
+    spawnbedformat: "%name%'s bed"
+    showworldborder: true
+    worldborderlabel: Border
+```
+3. Change
+```yaml
+showlable: false
+```
+to
+```yaml
+showlable: true
+```
 
 # Deleting maps
 1. Find the **ID** of the map you want to delete:
