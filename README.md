@@ -1,5 +1,3 @@
-This is my first GitHub project, so the quality is not that high. I don't know how to add pictures, and the guide overall doesn't look that clean. It is also my first time using markdown. But I am happy about the result, and would love feedback on the guide so i can improve. If I made any mistakes, or if you have any questions let me know, I will try to help as best as i can
-
 _This guide is heavely inspired by a guide by @depwl9992. The guides are very similar, but i wanned to include some things i wish i knew, or had problems with when i was reading his guide https://gist.github.com/depwl9992/626bf2c20269abe9cda79eeab0de58af._
 
 ***I will not show how to download and install dynmap, so make sure to download and get it working before doing the steps bellow. This guide is for rendering a additional map of the nether roof, while also showing some other useful commands.***
